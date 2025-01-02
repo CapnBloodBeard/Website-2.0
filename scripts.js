@@ -32,8 +32,10 @@ if (document.querySelector('.blog-posts')) {
     const blogContainer = document.querySelector('.blog-posts');
 
     blogFiles.forEach((file, index) => {
+        console.log(`Fetching file: ${file}`); // Debug log
         fetch(file)
             .then(response => {
+                console.log(`Received response for ${file}:`, response); // Debug log
                 if (!response.ok) {
                     throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
                 }
@@ -72,7 +74,6 @@ if (document.querySelector('.blog-posts')) {
                 const bodyElement = document.createElement('div');
                 bodyElement.innerHTML = marked(body); // Use marked to parse Markdown
                 bodyElement.classList.add('blog-body');
-                bodyElement.style.display = 'none';
                 postElement.appendChild(bodyElement);
 
                 headerElement.addEventListener('click', () => {
