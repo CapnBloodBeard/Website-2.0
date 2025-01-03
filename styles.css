@@ -67,44 +67,6 @@ footer {
     bottom: 0;
 }
 
-.blog-post {
-    border: 1px solid var(--primary-color);
-    margin: 10px 0;
-    padding: 10px;
-    cursor: pointer;
-    text-align: left; /* Align text to the left */
-    transition: background-color 0.3s ease; /* Add transition for background color */
-}
-.blog-post:hover {
-    background-color: var(--hover-color); /* Change background color on hover */
-}
-
-.blog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.blog-number {
-    flex: 1;
-    text-align: left;
-}
-
-.blog-title {
-    flex: 2;
-    text-align: center;
-}
-
-.blog-date {
-    flex: 1;
-    text-align: right;
-}
-
-.blog-body {
-    margin-top: 10px;
-    display: none;
-}
-
 /* Page transition effect */
 body.fade-out {
     opacity: 0;
